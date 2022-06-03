@@ -71,7 +71,7 @@
 				</executions>
 				<configuration>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-					<repository>registry.hub.docker.com/quangnghi99/${project.artifactId}</repository>
+					<repository>registry.hub.docker.com/quangnghi/${project.artifactId}</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
