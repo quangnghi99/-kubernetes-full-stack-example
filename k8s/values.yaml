@@ -1,0 +1,21 @@
+mongo:
+  name: mongo
+  image: mongo:3.6.17-xenial
+  port: 27017
+  targetPort: 27017
+
+volumes:
+  name: mongo-pvc
+  storage: 256Mi
+
+api:
+  name: student-app-api
+  image:  quangnghi/student-app-api:0.0.1-SNAPSHOT
+  port: 8080
+  targetPort: 8080
+
+client:
+  name: student-app-client
+  image: quangnghi/student-app-client
+  port: 80
+  targetPort: 80
