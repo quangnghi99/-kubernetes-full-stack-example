@@ -46,7 +46,6 @@ pipeline {
         }
         stage('Helm'){
             steps{
-                sh 'helm upgrade istio-ingress istio/gateway -f ipgateway.yaml --install'
                 sh 'helm upgrade nghi k8s --install'
             }
         }
