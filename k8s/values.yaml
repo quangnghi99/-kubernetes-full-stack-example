@@ -16,6 +16,6 @@ api:
 
 client:
   name: student-app-client
-  image: quangnghi/student-app-client
+  image: quangnghi/student-app-client:latest
   port: 80
   targetPort: 80
