@@ -54,6 +54,7 @@ pipeline {
             steps{
                 sh 'helm repo add bitnami https://charts.bitnami.com/bitnami'
                 sh 'helm upgrade grafana bitnami/grafana --install'
+                sh 'echo "Password: $(kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)"'
                 sh 'helm repo add prometheus-community https://prometheus-community.github.io/helm-charts'
                 sh 'helm upgrade prometheus prometheus-community/prometheus --install'
             }
