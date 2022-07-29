@@ -15,7 +15,7 @@ pipeline {
             steps { 
                 dir('react-student-management-web-app') {
                     script { 
-                    dockerImage = docker.build registry + ":03" 
+                    dockerImage = docker.build registry + ":01" 
                     }
                 }
                 dir('spring-boot-student-app-api') {
